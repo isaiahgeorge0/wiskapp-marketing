@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --wisk-bg: #0b0f1a;
+  --wisk-purple: #7f77dd;
+  --wisk-teal: #1d9e75;
+  --wisk-card: #111827;
+  --wisk-border: rgba(255, 255, 255, 0.08);
+  --wisk-muted: #94a3b8;
+}
+
+@theme inline {
+  --color-wisk-bg: var(--wisk-bg);
+  --color-wisk-purple: var(--wisk-purple);
+  --color-wisk-teal: var(--wisk-teal);
+  --color-wisk-card: var(--wisk-card);
+  --color-wisk-border: var(--wisk-border);
+  --color-wisk-muted: var(--wisk-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--wisk-bg);
+  color: #ffffff;
+}
+
+@keyframes hero-drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(4%, -3%) scale(1.05);
+  }
+}
+
+@keyframes hero-drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-3%, 4%) scale(1.08);
+  }
+}
+
+.hero-glow-a {
+  animation: hero-drift-a 24s ease-in-out infinite;
+}
+
+.hero-glow-b {
+  animation: hero-drift-b 28s ease-in-out infinite;
+}
