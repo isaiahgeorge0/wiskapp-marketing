@@ -2,12 +2,29 @@ import type { Metadata } from "next";
 
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { getPublishedPosts } from "@/lib/blog";
+import { blogDescription, blogTitle } from "@/lib/metadata";
+import { getDefaultOgImageUrl } from "@/lib/site-url";
 
 export const revalidate = 3600;
 
+const ogImage = getDefaultOgImageUrl();
+
 export const metadata: Metadata = {
-  title: "Blog — WISK",
-  description: "Updates, insights, and thoughts on building WISK.",
+  title: blogTitle,
+  description: blogDescription,
+  openGraph: {
+    type: "website",
+    siteName: "WISK",
+    title: blogTitle,
+    description: blogDescription,
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: blogTitle,
+    description: blogDescription,
+    images: [ogImage],
+  },
 };
 
 export default async function BlogPage() {

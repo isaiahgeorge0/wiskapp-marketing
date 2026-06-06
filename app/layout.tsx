@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+import { siteDescription, siteTitle } from "@/lib/metadata";
+import { getSiteUrl } from "@/lib/site-url";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "WISK — Your business. Centralised.",
-  description:
-    "The command centre for freelancers, creators, and small business owners. Manage projects, tasks, goals, leads, and content in one place.",
+  metadataBase: new URL(getSiteUrl()),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    siteName: "WISK",
+    title: siteTitle,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-wisk-bg text-white antialiased">{children}</body>
+      <body className="bg-wisk-bg text-white antialiased">
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

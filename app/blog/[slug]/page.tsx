@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 import { getPostBySlug } from "@/lib/blog";
 import { formatDate } from "@/lib/format-date";
+import { getDefaultOgImageUrl } from "@/lib/site-url";
 
 export const revalidate = 3600;
 
@@ -20,13 +21,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Post not found — WISK" };
   }
 
+  const ogImage = post.cover_image_url ?? getDefaultOgImageUrl();
+
   return {
     title: `${post.title} — WISK`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      ...(post.cover_image_url && { images: [post.cover_image_url] }),
+      type: "article",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -39,8 +49,37 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const ogImage = post.cover_image_url ?? getDefaultOgImageUrl();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: ogImage,
+    datePublished: post.published_at,
+    dateModified: post.updated_at || post.published_at,
+    author: {
+      "@type": "Person",
+      name: post.author_name || "WISK",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "WISK",
+      logo: {
+        "@type": "ImageObject",
+        url: getDefaultOgImageUrl(),
+      },
+    },
+  };
+
   return (
     <main className="px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="mx-auto max-w-3xl">
         <Link
           href="/blog"
