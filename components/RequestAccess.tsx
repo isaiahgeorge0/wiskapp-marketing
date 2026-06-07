@@ -1,17 +1,39 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const formContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.12,
+    },
+  },
+};
+
+const fieldVariant = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease },
+  },
+};
+
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export function RequestAccess() {
+  const shouldReduceMotion = useReducedMotion();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [state, setState] = useState<FormState>("idle");
@@ -64,19 +86,19 @@ export function RequestAccess() {
     <section id="request-access" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-xl text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease }}
           className="text-3xl font-semibold tracking-tight md:text-4xl"
         >
           Ready to take control of your business?
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.08, ease }}
           className="mt-4 text-wisk-muted"
         >
           WISK is currently invite-only. Request access and we&apos;ll be in
@@ -99,14 +121,15 @@ export function RequestAccess() {
             ) : (
               <motion.form
                 key="form"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.4 }}
+                variants={shouldReduceMotion ? undefined : formContainer}
+                initial={shouldReduceMotion ? false : "hidden"}
+                whileInView={shouldReduceMotion ? undefined : "visible"}
+                viewport={{ once: true, amount: 0.3 }}
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4 text-left"
               >
-                <input
+                <motion.input
+                  variants={shouldReduceMotion ? undefined : fieldVariant}
                   type="text"
                   name="name"
                   placeholder="Your name"
@@ -115,7 +138,8 @@ export function RequestAccess() {
                   disabled={state === "submitting"}
                   className="rounded-lg border border-wisk-border bg-wisk-card px-4 py-3 text-sm text-white placeholder:text-wisk-muted/60 outline-none transition-colors focus:border-wisk-purple/50 disabled:opacity-50"
                 />
-                <input
+                <motion.input
+                  variants={shouldReduceMotion ? undefined : fieldVariant}
                   type="email"
                   name="email"
                   placeholder="Your email"
@@ -124,13 +148,34 @@ export function RequestAccess() {
                   disabled={state === "submitting"}
                   className="rounded-lg border border-wisk-border bg-wisk-card px-4 py-3 text-sm text-white placeholder:text-wisk-muted/60 outline-none transition-colors focus:border-wisk-purple/50 disabled:opacity-50"
                 />
-                <Button
-                  type="submit"
-                  disabled={state === "submitting"}
-                  className="w-full disabled:opacity-50"
+                <motion.div
+                  variants={shouldReduceMotion ? undefined : fieldVariant}
+                  whileInView={
+                    shouldReduceMotion
+                      ? undefined
+                      : {
+                          scale: [1, 1.02, 1],
+                        }
+                  }
+                  viewport={{ once: false, amount: 0.6 }}
+                  transition={
+                    shouldReduceMotion
+                      ? undefined
+                      : {
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }
+                  }
                 >
-                  {state === "submitting" ? "Submitting…" : "Request access"}
-                </Button>
+                  <Button
+                    type="submit"
+                    disabled={state === "submitting"}
+                    className="w-full disabled:opacity-50"
+                  >
+                    {state === "submitting" ? "Submitting…" : "Request access"}
+                  </Button>
+                </motion.div>
                 {state === "error" && errorMessage && (
                   <p className="text-center text-sm text-red-400">{errorMessage}</p>
                 )}

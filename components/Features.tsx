@@ -1,43 +1,68 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { features } from "@/lib/features";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const headingVariant = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease },
+  },
+};
+
+const cardsContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.12,
+    },
+  },
+};
 
 const cardVariant = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.5, ease },
   },
 };
 
 export function Features() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
+          variants={shouldReduceMotion ? undefined : headingVariant}
+          initial={shouldReduceMotion ? false : "hidden"}
+          whileInView={shouldReduceMotion ? undefined : "visible"}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center text-3xl font-semibold tracking-tight md:text-4xl"
         >
           Everything you need. Nothing you don&apos;t.
         </motion.h2>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, i) => {
+        <motion.div
+          variants={shouldReduceMotion ? undefined : cardsContainer}
+          initial={shouldReduceMotion ? false : "hidden"}
+          whileInView={shouldReduceMotion ? undefined : "visible"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <motion.div
                 key={feature.name}
-                variants={cardVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ delay: i * 0.08 }}
+                variants={shouldReduceMotion ? undefined : cardVariant}
                 className="rounded-xl border border-wisk-border bg-wisk-card p-6"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-wisk-purple/15">
@@ -50,7 +75,7 @@ export function Features() {
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -14,21 +14,49 @@ const paragraphs = [
 
 const closingLine = "If that sounds like you, you already know.";
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 const paragraphVariant = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, filter: "blur(8px)" },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease },
   },
 };
 
-const containerVariant = {
-  hidden: {},
+const staticParagraphVariant = {
+  hidden: { opacity: 0, y: 8 },
   visible: {
-    transition: { staggerChildren: 0.1 },
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease },
   },
 };
+
+type AnimatedParagraphProps = {
+  children: React.ReactNode;
+  className?: string;
+  reduceMotion: boolean | null;
+};
+
+function AnimatedParagraph({
+  children,
+  className,
+  reduceMotion,
+}: AnimatedParagraphProps) {
+  return (
+    <motion.p
+      variants={reduceMotion ? staticParagraphVariant : paragraphVariant}
+      initial={reduceMotion ? false : "hidden"}
+      whileInView={reduceMotion ? undefined : "visible"}
+      viewport={{ once: true, amount: 0.2 }}
+      className={className}
+    >
+      {children}
+    </motion.p>
+  );
+}
 
 export function AboutWisk() {
   const shouldReduceMotion = useReducedMotion();
@@ -40,42 +68,24 @@ export function AboutWisk() {
           What WISK means
         </h2>
 
-        {shouldReduceMotion ? (
-          <div className="mt-12 text-lg leading-relaxed text-wisk-muted md:text-xl">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)} className="mb-6 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
-            <p className="mt-12 mb-8 text-center text-xl font-medium text-white">
-              {closingLine}
-            </p>
-          </div>
-        ) : (
-          <motion.div
-            className="mt-12 text-lg leading-relaxed text-wisk-muted md:text-xl"
-            variants={containerVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            {paragraphs.map((paragraph) => (
-              <motion.p
-                key={paragraph.slice(0, 32)}
-                variants={paragraphVariant}
-                className="mb-6 last:mb-0"
-              >
-                {paragraph}
-              </motion.p>
-            ))}
-            <motion.p
-              variants={paragraphVariant}
-              className="mt-12 mb-8 text-center text-xl font-medium text-white"
+        <div className="mt-12 text-lg leading-relaxed text-wisk-muted md:text-xl">
+          {paragraphs.map((paragraph) => (
+            <AnimatedParagraph
+              key={paragraph.slice(0, 32)}
+              reduceMotion={shouldReduceMotion}
+              className="mb-6 last:mb-0"
             >
-              {closingLine}
-            </motion.p>
-          </motion.div>
-        )}
+              {paragraph}
+            </AnimatedParagraph>
+          ))}
+
+          <AnimatedParagraph
+            reduceMotion={shouldReduceMotion}
+            className="mt-12 mb-8 text-center text-xl font-medium text-white"
+          >
+            {closingLine}
+          </AnimatedParagraph>
+        </div>
       </div>
     </section>
   );
