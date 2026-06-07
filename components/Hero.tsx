@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/Button";
 
-const headline = "Your business. Centralised.";
+const headline = "Your business, whisked together.";
 const words = headline.split(" ");
 
 const container = {
@@ -84,9 +84,9 @@ export function Hero() {
           transition={{ delay: 0.45 }}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-wisk-muted md:text-xl"
         >
-          The command centre for freelancers, creators, and small business
-          owners. Manage projects, tasks, goals, leads, and content — all in one
-          place.
+          One command centre for ambitious people.
+          <br />
+          Built on wisdom, integrity, strength, and knowledge.
         </motion.p>
 
         <motion.div

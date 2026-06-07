@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { AboutWisk } from "@/components/AboutWisk";
 import { Features } from "@/components/Features";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -30,6 +31,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Features />
+      <AboutWisk />
       <Testimonials />
       <RequestAccess />
       <Footer />
