@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { RequestAccess } from "@/components/RequestAccess";
+import { OverviewSpotlight } from "@/components/sections/OverviewSpotlight";
 import { Testimonials } from "@/components/Testimonials";
 import { siteDescription, siteTitle } from "@/lib/metadata";
 
@@ -32,6 +33,7 @@ export default function Home() {
       <Hero />
       <Features />
       <AboutWisk />
+      <OverviewSpotlight />
       <Testimonials />
       <RequestAccess />
       <Footer />
