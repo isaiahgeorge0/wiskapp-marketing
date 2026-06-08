@@ -15,7 +15,7 @@ export function VisionCardShell({
 }: VisionCardShellProps) {
   return (
     <div
-      className="relative aspect-[5/4] rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0f]"
+      className="relative flex aspect-auto flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0f] md:aspect-[5/4]"
       style={{
         boxShadow: `0 30px 80px -25px ${accentColor}4D`,
       }}
@@ -51,7 +51,7 @@ export function VisionCardShell({
       )}
 
       {/* Card content */}
-      <div className="relative flex h-full flex-col p-7 md:p-8">
+      <div className="relative flex flex-1 flex-col p-7 md:p-8">
         <div className="flex-1">{children}</div>
 
         {/* Footer */}

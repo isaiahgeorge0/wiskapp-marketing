@@ -90,7 +90,7 @@ export function AIInsightsCard() {
   return (
     <VisionCardShell
       badge={{ text: "Coming with WISK Growth", accent: "#A78BFA" }}
-      footer={{ package: "WISK Growth", timing: "Late 2026" }}
+      footer={{ package: "WISK Growth", timing: "Coming soon" }}
       accentColor="#A78BFA"
     >
       {/* Header */}

@@ -74,7 +74,7 @@ export function ContentModuleCard() {
 
   return (
     <motion.div
-      className="relative flex aspect-[5/4] flex-col overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a0f] p-7 md:p-8"
+      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a0f] p-7 md:aspect-[5/4] md:p-8"
       style={{ boxShadow: "0 30px 80px -25px rgba(249,112,102,0.28)" }}
       whileHover={reduce ? undefined : {
         y: -4,
