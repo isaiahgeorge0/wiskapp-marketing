@@ -6,9 +6,9 @@ import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { RequestAccess } from "@/components/RequestAccess";
 import { CommandCentreModules } from "@/components/sections/CommandCentreModules";
+import { BuiltForBuilders } from "@/components/sections/BuiltForBuilders";
 import { FutureVision } from "@/components/sections/FutureVision";
 import { OverviewSpotlight } from "@/components/sections/OverviewSpotlight";
-import { Testimonials } from "@/components/Testimonials";
 import { siteDescription, siteTitle } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function Home() {
       <OverviewSpotlight />
       <CommandCentreModules />
       <FutureVision />
-      <Testimonials />
+      <BuiltForBuilders />
       <RequestAccess />
       <Footer />
     </main>

@@ -28,6 +28,9 @@ const fieldVariant = {
   },
 };
 
+const inputClasses =
+  "w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3.5 text-base text-white/90 placeholder:text-white/40 outline-none transition-all duration-200 hover:border-white/20 hover:bg-white/[0.04] focus:border-purple-400/60 focus:bg-white/[0.04] focus:ring-4 focus:ring-purple-400/15 disabled:opacity-50";
+
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -83,29 +86,95 @@ export function RequestAccess() {
   }
 
   return (
-    <section id="request-access" className="px-6 py-16 md:py-24">
-      <div className="mx-auto max-w-xl text-center">
+    <section
+      id="request-access"
+      className="relative overflow-hidden px-6 py-16 md:py-24"
+    >
+      {/* Atmospheric orbs */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* Purple — top-right */}
+        <motion.div
+          className="absolute -right-48 -top-32 h-[700px] w-[700px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)",
+            filter: "blur(72px)",
+            mixBlendMode: "screen",
+          }}
+          animate={
+            shouldReduceMotion
+              ? undefined
+              : { x: [0, -40, 0], y: [0, 30, 0] }
+          }
+          transition={
+            shouldReduceMotion
+              ? undefined
+              : { duration: 30, repeat: Infinity, ease: "easeInOut" }
+          }
+        />
+        {/* Teal — bottom-left */}
+        <motion.div
+          className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(20,184,166,0.10) 0%, transparent 70%)",
+            filter: "blur(64px)",
+            mixBlendMode: "screen",
+          }}
+          animate={
+            shouldReduceMotion
+              ? undefined
+              : { x: [0, 50, 0], y: [0, -30, 0] }
+          }
+          transition={
+            shouldReduceMotion
+              ? undefined
+              : { duration: 40, repeat: Infinity, ease: "easeInOut" }
+          }
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-xl text-center">
+        {/* Eyebrow */}
+        <motion.p
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+          whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.45, ease }}
+          className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-purple-300/70"
+        >
+          Request access
+        </motion.p>
+
+        {/* Headline */}
         <motion.h2
           initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, ease }}
+          transition={{ duration: 0.5, delay: 0.05, ease }}
           className="text-3xl font-semibold tracking-tight md:text-4xl"
         >
-          Ready to take control of your business?
+          Ready to{" "}
+          <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
+            whisk
+          </span>
+          {" "}it all together?
         </motion.h2>
+
+        {/* Sub-line */}
         <motion.p
           initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.08, ease }}
+          transition={{ duration: 0.5, delay: 0.1, ease }}
           className="mt-4 text-wisk-muted"
         >
           WISK is currently invite-only. Request access and we&apos;ll be in
-          touch.
+          touch within a few days.
         </motion.p>
 
-        <div className="mt-10">
+        {/* Form */}
+        <div className="mt-10 md:mt-14">
           <AnimatePresence mode="wait">
             {state === "success" ? (
               <motion.p
@@ -126,52 +195,42 @@ export function RequestAccess() {
                 whileInView={shouldReduceMotion ? undefined : "visible"}
                 viewport={{ once: true, amount: 0.3 }}
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-4 text-left"
+                className="mx-auto flex max-w-md flex-col gap-4 text-left"
               >
                 <motion.input
                   variants={shouldReduceMotion ? undefined : fieldVariant}
                   type="text"
                   name="name"
+                  aria-label="Your name"
                   placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   disabled={state === "submitting"}
-                  className="rounded-lg border border-wisk-border bg-wisk-card px-4 py-3 text-sm text-white placeholder:text-wisk-muted/60 outline-none transition-colors focus:border-wisk-purple/50 disabled:opacity-50"
+                  className={inputClasses}
                 />
                 <motion.input
                   variants={shouldReduceMotion ? undefined : fieldVariant}
                   type="email"
                   name="email"
+                  aria-label="Your email"
                   placeholder="Your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={state === "submitting"}
-                  className="rounded-lg border border-wisk-border bg-wisk-card px-4 py-3 text-sm text-white placeholder:text-wisk-muted/60 outline-none transition-colors focus:border-wisk-purple/50 disabled:opacity-50"
+                  className={inputClasses}
                 />
                 <motion.div
                   variants={shouldReduceMotion ? undefined : fieldVariant}
-                  whileInView={
-                    shouldReduceMotion
-                      ? undefined
-                      : {
-                          scale: [1, 1.02, 1],
-                        }
+                  whileHover={
+                    shouldReduceMotion ? undefined : { y: -1 }
                   }
-                  viewport={{ once: false, amount: 0.6 }}
-                  transition={
-                    shouldReduceMotion
-                      ? undefined
-                      : {
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }
-                  }
+                  transition={{ duration: 0.2, ease: "easeOut" }}
                 >
                   <Button
+                    variant="gradient"
                     type="submit"
                     disabled={state === "submitting"}
-                    className="w-full disabled:opacity-50"
+                    className="w-full px-7 py-3.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
                   >
                     {state === "submitting" ? "Submitting…" : "Request access"}
                   </Button>
