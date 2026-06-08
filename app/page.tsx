@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 import { AboutWisk } from "@/components/AboutWisk";
-import { Features } from "@/components/Features";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { RequestAccess } from "@/components/RequestAccess";
+import { CommandCentreModules } from "@/components/sections/CommandCentreModules";
 import { OverviewSpotlight } from "@/components/sections/OverviewSpotlight";
 import { Testimonials } from "@/components/Testimonials";
 import { siteDescription, siteTitle } from "@/lib/metadata";
@@ -31,9 +31,9 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <Features />
       <AboutWisk />
       <OverviewSpotlight />
+      <CommandCentreModules />
       <Testimonials />
       <RequestAccess />
       <Footer />

@@ -29,7 +29,7 @@ export function Testimonials() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="px-6 py-24 md:py-32">
+    <section className="px-6 py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}

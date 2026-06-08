@@ -83,7 +83,7 @@ export function RequestAccess() {
   }
 
   return (
-    <section id="request-access" className="px-6 py-24 md:py-32">
+    <section id="request-access" className="px-6 py-16 md:py-24">
       <div className="mx-auto max-w-xl text-center">
         <motion.h2
           initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}

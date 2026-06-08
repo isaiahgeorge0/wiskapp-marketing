@@ -15,7 +15,7 @@ export function OverviewSpotlight() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative w-full overflow-hidden py-28 md:py-40">
+    <section className="relative w-full overflow-hidden py-16 md:py-24">
       {/* Atmospheric glows */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Purple glow — center-top, behind the mock */}
