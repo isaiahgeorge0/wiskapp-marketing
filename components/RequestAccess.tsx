@@ -169,7 +169,7 @@ export function RequestAccess() {
           transition={{ duration: 0.5, delay: 0.1, ease }}
           className="mt-4 text-wisk-muted"
         >
-          WISK is currently invite-only. Request access and we&apos;ll be in
+          WISK is currently invite only. Request access and we&apos;ll be in
           touch within a few days.
         </motion.p>
 
