@@ -39,7 +39,7 @@ const CHANNEL_DATA = {
     color:        STRIPE_COLOR,
     stat1:        { value: "£3,180", label: "This month" },
     stat2:        "+18% vs last month",
-    insight:      "Your tutorial videos generate the highest-value subscribers. Consider a paid course tier — your audience signals demand.",
+    insight:      "Your tutorial videos generate the highest-value subscribers. Consider a paid course tier. Your audience signals demand.",
     activePulse:  1, // middle connection line pulses
   },
 } as const;

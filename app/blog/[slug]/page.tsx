@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = await getPostBySlug(slug);
 
   if (!post) {
-    return { title: "Post not found — WISK" };
+    return { title: "Post not found | WISK" };
   }
 
   const ogImage = post.cover_image_url ?? getDefaultOgImageUrl();
 
   return {
-    title: `${post.title} — WISK`,
+    title: `${post.title} | WISK`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

@@ -74,7 +74,7 @@ export function OverviewSpotlight() {
           transition={{ delay: reduce ? 0 : 0.2 }}
           className="mx-auto mb-10 max-w-2xl text-center text-lg text-white/60 md:mb-12 md:text-xl"
         >
-          Your projects, tasks, goals, content, and leads — all in one view, working together.
+          Your projects, tasks, goals, content, and leads. All in one view, working together.
         </motion.p>
 
         {/* Mock */}

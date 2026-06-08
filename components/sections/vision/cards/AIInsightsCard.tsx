@@ -11,15 +11,15 @@ import { VisionCardShell } from "@/components/sections/vision/VisionCardShell";
 const CONVERSATIONS = [
   {
     user: "Why did my last Instagram reel underperform?",
-    ai: "Three things stand out. The hook took 4.2 seconds to land — your top performers all hook in under 2 seconds. You posted at 2pm Tuesday; your audience peaks at 7pm on weekdays. And the topic (client testimonials) historically underperforms your educational content by 60%.",
+    ai: "Three things stand out. The hook took 4.2 seconds to land. Your top performers all hook in under 2 seconds. You posted at 2pm Tuesday; your audience peaks at 7pm on weekdays. And the topic (client testimonials) historically underperforms your educational content by 60%.",
   },
   {
     user: "Which lead should I follow up with first this week?",
-    ai: "Maya Chen — moved to Proposal stage 4 days ago, viewed your portfolio twice yesterday, and her company just announced a funding round. The buying signal is strong. Your other proposal-stage leads have been quiet for over two weeks.",
+    ai: "Maya Chen moved to Proposal stage 4 days ago, viewed your portfolio twice yesterday, and her company just announced a funding round. The buying signal is strong. Your other proposal-stage leads have been quiet for over two weeks.",
   },
   {
     user: "Should I take on this new client project?",
-    ai: "Your current workload runs you to 87% capacity through next month. Adding this would push you to 105% — and the deadline overlaps with your two highest-value active projects. Recommend negotiating a start date two weeks out, or it'll cost the work that's already paying.",
+    ai: "Your current workload runs you to 87% capacity through next month. Adding this would push you to 105%, and the deadline overlaps with your two highest-value active projects. Recommend negotiating a start date two weeks out, or it'll cost the work that's already paying.",
   },
 ] as const;
 

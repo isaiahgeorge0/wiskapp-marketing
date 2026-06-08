@@ -70,7 +70,7 @@ export function Hero() {
           animate={reduce ? undefined : "visible"}
           className="mb-8 inline-flex rounded-full border border-wisk-border bg-white/5 px-4 py-1.5 text-xs font-medium tracking-widest text-wisk-muted uppercase"
         >
-          Invite only — request access below
+          Invite only. Request access below.
         </motion.span>
 
         {/* Headline */}

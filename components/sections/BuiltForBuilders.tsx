@@ -51,7 +51,7 @@ export function BuiltForBuilders() {
             accentColor="#A78BFA"
             icon="Briefcase"
             type="Freelancers & solo operators"
-            description="Developers, designers, consultants — anyone juggling client work, deadlines, and the business behind it."
+            description="Developers, designers, consultants. Anyone juggling client work, deadlines, and the business behind it."
             tagline="Client work, organised."
           />
           <BuilderCard

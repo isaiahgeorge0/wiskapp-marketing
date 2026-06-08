@@ -56,7 +56,7 @@ export function FutureVision() {
             The next twelve months.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
-            What WISK becomes as it grows. These are the next capabilities — built
+            What WISK becomes as it grows. These are the next capabilities, built
             on the same foundation you&apos;ve just seen.
           </p>
         </div>
@@ -71,7 +71,7 @@ export function FutureVision() {
               <VisionTextBlock
                 eyebrow="AI Insights"
                 headline="An advisor that knows your business."
-                body="Ask WISK anything about your content, leads, or performance. Get specific, multi-factor answers that explain the why — not just the what."
+                     body="Ask WISK anything about your content, leads, or performance. Get specific, multi-factor answers that explain the why, not just the what."
               />
             }
           />
@@ -97,7 +97,7 @@ export function FutureVision() {
               <VisionTextBlock
                 eyebrow="Commerce"
                 headline="From content to revenue, connected."
-                body="Connect Shopify, Stripe, and your favorite commerce tools. See exactly how your content drives sales — which post sold what, which campaign converted, where revenue actually comes from."
+                body="Connect Shopify, Stripe, and your favorite commerce tools. See exactly how your content drives sales: which post sold what, which campaign converted, where revenue actually comes from."
               />
             }
           />

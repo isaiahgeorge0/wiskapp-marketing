@@ -62,7 +62,7 @@ export function CommandCentreModules() {
             textBlock={
               <ModuleTextBlock
                 eyebrow="Content"
-                headline="Plan, schedule, ship — across every platform."
+                headline="Plan, schedule, and ship across every platform."
                 body="Build out your content calendar across TikTok, Instagram, YouTube, and more. Watch your streak grow as you ship."
               />
             }

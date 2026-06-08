@@ -185,7 +185,7 @@ export function RequestAccess() {
                 transition={{ duration: 0.4 }}
                 className="text-lg text-wisk-teal"
               >
-                Thanks — we&apos;ll be in touch soon.
+                Thanks. We&apos;ll be in touch soon.
               </motion.p>
             ) : (
               <motion.form
