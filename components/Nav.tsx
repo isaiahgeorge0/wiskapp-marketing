@@ -27,7 +27,15 @@ export function Nav() {
             Blog
           </Link>
         </div>
-        <Button href={requestAccessHref}>Request access</Button>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://app.wiskapp.com/sign-in"
+            className="text-sm font-medium text-wisk-muted transition-colors hover:text-white"
+          >
+            Sign in
+          </a>
+          <Button href={requestAccessHref}>Request access</Button>
+        </div>
       </div>
     </header>
   );
