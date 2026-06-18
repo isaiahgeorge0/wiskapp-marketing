@@ -5,6 +5,9 @@ import { createServerClient } from "@/lib/supabase/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const ALREADY_REGISTERED_MESSAGE =
+  "This email is already registered. Try signing in instead, or use 'Forgot password' if you need to reset your access.";
+
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -65,6 +68,30 @@ export async function POST(request: Request) {
     }
 
     const supabase = createServerClient();
+
+    const { data: existingUser, error: lookupError } = await supabase
+      .from("users")
+      .select("id")
+      .ilike("email", email)
+      .maybeSingle();
+
+    if (lookupError) {
+      console.error("request-access: user lookup:", lookupError);
+      return NextResponse.json(
+        { error: "Unable to submit your request. Please try again." },
+        { status: 500 },
+      );
+    }
+
+    if (existingUser) {
+      return NextResponse.json(
+        {
+          error: ALREADY_REGISTERED_MESSAGE,
+          alreadyRegistered: true,
+        },
+        { status: 409 },
+      );
+    }
 
     const { error } = await supabase.from("access_requests").insert({
       name,

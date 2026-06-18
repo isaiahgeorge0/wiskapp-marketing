@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 
-type FormState = "idle" | "submitting" | "success" | "error";
+type FormState = "idle" | "submitting" | "success" | "error" | "already_registered";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -70,9 +70,21 @@ export function RequestAccess() {
         body: JSON.stringify({ name: trimmedName, email: trimmedEmail }),
       });
 
-      const data = (await res.json()) as { error?: string };
+      const data = (await res.json()) as {
+        error?: string;
+        alreadyRegistered?: boolean;
+      };
 
       if (!res.ok) {
+        if (data.alreadyRegistered) {
+          setState("already_registered");
+          setErrorMessage(
+            data.error ??
+              "This email is already registered. Try signing in instead.",
+          );
+          return;
+        }
+
         setState("error");
         setErrorMessage(data.error ?? "Something went wrong. Please try again.");
         return;
@@ -187,6 +199,25 @@ export function RequestAccess() {
               >
                 Thanks. We&apos;ll be in touch soon.
               </motion.p>
+            ) : state === "already_registered" ? (
+              <motion.div
+                key="already-registered"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.4 }}
+                className="mx-auto max-w-md rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left"
+              >
+                <p className="text-sm leading-relaxed text-white/90">
+                  {errorMessage}
+                </p>
+                <a
+                  href="https://app.wiskapp.com/sign-in"
+                  className="mt-4 inline-flex rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2 text-sm font-medium text-white/90 transition-colors hover:border-white/25 hover:bg-white/[0.08]"
+                >
+                  Go to sign in
+                </a>
+              </motion.div>
             ) : (
               <motion.form
                 key="form"

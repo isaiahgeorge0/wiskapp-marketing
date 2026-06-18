@@ -1,20 +1,12 @@
 # Privacy Policy
 
-**Last updated: [DATE TO BE ADDED ON PUBLISH]**
-
----
-
-> **Note for Zay — placeholders to update before publishing:**
-> - `[OPERATOR NAME]` — currently "Isaiah George Creative." Update if/when WISK incorporates as its own entity.
-> - `[REGISTERED ADDRESS]` — add once available (not required to publish, but good practice once you have one).
-> - `[DATE TO BE ADDED ON PUBLISH]` — set to actual publish date.
-> - Review the "Sub-processors" table whenever a new third-party tool is added to WISK's stack.
+**Last updated: 18 June 2026**
 
 ---
 
 ## 1. Who we are
 
-WISK ("**WISK**," "**we**," "**us**," or "**our**") is a business command centre platform operated by **[OPERATOR NAME]**, based in the United Kingdom.
+WISK ("**WISK**," "**we**," "**us**," or "**our**") is a business command centre platform operated by **Isaiah George Creative**, based in the United Kingdom.
 
 This Privacy Policy explains how we collect, use, store, and protect your personal data when you use WISK, including our website (wiskapp.com), our application (app.wiskapp.com), and any related services (together, the "**Service**").
 
@@ -212,6 +204,6 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions, concerns, or requests relating to this Privacy Policy or your personal data, please contact:
 
-**[OPERATOR NAME]**
+**Isaiah George Creative**
 Email: hello@wiskapp.com
 Website: https://wiskapp.com

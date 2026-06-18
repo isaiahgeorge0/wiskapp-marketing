@@ -1,21 +1,12 @@
 # Terms of Service
 
-**Last updated: [DATE TO BE ADDED ON PUBLISH]**
-
----
-
-> **Note for Zay — placeholders to update before publishing:**
-> - `[OPERATOR NAME]` — currently "Isaiah George Creative." Update if/when WISK incorporates as its own entity.
-> - `[REGISTERED ADDRESS]` — add once available.
-> - `[DATE TO BE ADDED ON PUBLISH]` — set to actual publish date.
-> - Section 6 (Subscriptions & Billing) is written to apply once paid packages launch. Until then it's largely dormant but safe to publish — it just won't be actively relied upon.
-> - Review Section 4 (Acceptable Use) periodically as new features (e.g. collaboration, sharing) are added.
+**Last updated: 18 June 2026**
 
 ---
 
 ## 1. Introduction
 
-These Terms of Service ("**Terms**") govern your access to and use of WISK, a business command centre platform operated by **[OPERATOR NAME]** ("**WISK**," "**we**," "**us**," or "**our**"), including our website at wiskapp.com, our application at app.wiskapp.com, and any related services (together, the "**Service**").
+These Terms of Service ("**Terms**") govern your access to and use of WISK, a business command centre platform operated by **Isaiah George Creative** ("**WISK**," "**we**," "**us**," or "**our**"), including our website at wiskapp.com, our application at app.wiskapp.com, and any related services (together, the "**Service**").
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree, you must not use the Service.
 
@@ -136,7 +127,7 @@ WISK allows you to optionally connect third-party services (such as Vercel, GitH
 
 ## 9. Intellectual property
 
-The Service, including its design, branding, software, and underlying technology (excluding Your Content), is owned by or licensed to **[OPERATOR NAME]** and is protected by intellectual property laws. These Terms do not grant you any rights to our trademarks, logos, or branding except as necessary to use the Service as intended.
+The Service, including its design, branding, software, and underlying technology (excluding Your Content), is owned by or licensed to **Isaiah George Creative** and is protected by intellectual property laws. These Terms do not grant you any rights to our trademarks, logos, or branding except as necessary to use the Service as intended.
 
 ---
 
@@ -175,7 +166,7 @@ Nothing in these Terms excludes or limits our liability for death or personal in
 
 ## 12. Limitation of liability
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, **[OPERATOR NAME]** SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS OPPORTUNITY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICE, WHETHER BASED ON CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, **Isaiah George Creative** SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS OPPORTUNITY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICE, WHETHER BASED ON CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS PRIOR TO THE CLAIM, OR (B) £50.
 
@@ -185,7 +176,7 @@ This limitation applies to the fullest extent permitted by law and does not affe
 
 ## 13. Indemnity
 
-You agree to indemnify and hold harmless **[OPERATOR NAME]** from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) Your Content; (b) your breach of these Terms; or (c) your violation of any applicable law or the rights of a third party.
+You agree to indemnify and hold harmless **Isaiah George Creative** from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) Your Content; (b) your breach of these Terms; or (c) your violation of any applicable law or the rights of a third party.
 
 ---
 
@@ -227,6 +218,6 @@ You may not assign or transfer your rights under these Terms without our prior w
 
 If you have any questions about these Terms, please contact us at:
 
-**[OPERATOR NAME]**
+**Isaiah George Creative**
 Email: hello@wiskapp.com
 Website: https://wiskapp.com
