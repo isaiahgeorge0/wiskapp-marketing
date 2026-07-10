@@ -22,7 +22,7 @@ export function WiskAIShowcase() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-wisk-muted md:text-lg">
             Winston reads every project, task, lead, goal, and note in your
-            workspace. Every Sunday it sends you a digest — wins, risks,
+            workspace. Every Sunday it sends you a digest. Wins, risks,
             what&apos;s coming, and one clear recommendation. Ask it anything,
             anytime.
           </p>
@@ -47,7 +47,7 @@ export function WiskAIShowcase() {
           </p>
 
           <a
-            href="https://app.wiskapp.com/sign-up"
+            href="https://app.wiskapp.com/sign-in"
             className="mt-8 inline-flex font-semibold text-wisk-section-winston transition-opacity hover:opacity-80"
           >
             Explore WISK AI →

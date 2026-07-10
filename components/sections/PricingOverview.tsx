@@ -129,7 +129,7 @@ export function PricingOverview() {
                 </ul>
 
                 <Button
-                  href="https://app.wiskapp.com/sign-up"
+                  href="https://app.wiskapp.com/sign-in"
                   className="w-full"
                 >
                   Get started

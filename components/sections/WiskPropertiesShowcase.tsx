@@ -43,7 +43,7 @@ export function WiskPropertiesShowcase() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-wisk-muted md:text-lg">
             Manage your portfolio, track rent, handle maintenance, and prepare
-            legal notices — all in one place. WISK Properties Pro adds yield
+            legal notices all in one place. WISK Properties Pro adds yield
             analytics, tenant reliability scoring, financial reports, and SA105
             tax summaries.
           </p>
@@ -68,7 +68,7 @@ export function WiskPropertiesShowcase() {
           </p>
 
           <a
-            href="https://app.wiskapp.com/sign-up"
+            href="https://app.wiskapp.com/sign-in"
             className="mt-8 inline-flex font-semibold text-wisk-ferrari transition-opacity hover:opacity-80"
           >
             Explore Properties →

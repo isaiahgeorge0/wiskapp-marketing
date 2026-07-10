@@ -33,7 +33,7 @@ export function Nav() {
           >
             Sign in
           </a>
-          <Button href="https://app.wiskapp.com/sign-up">Get started</Button>
+          <Button href="https://app.wiskapp.com/sign-in">Get started</Button>
         </div>
       </div>
     </header>
