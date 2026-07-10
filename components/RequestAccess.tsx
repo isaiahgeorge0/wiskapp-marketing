@@ -95,7 +95,7 @@ export function RequestAccess() {
           transition={{ duration: 0.5, delay: 0.15, ease }}
           className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:mt-14"
         >
-          <Button href={`${appUrl}/sign-in`}>Get started free</Button>
+          <Button href={`${appUrl}/sign-up`}>Get started free</Button>
           <Button variant="outline" href={`${appUrl}/sign-in`}>
             Sign in
           </Button>

@@ -21,7 +21,7 @@ export default function NotFound() {
       <div className="mt-10 flex flex-col items-center gap-4">
         <Button href="/">Go home</Button>
         <a
-          href="https://app.wiskapp.com/sign-in"
+          href="https://app.wiskapp.com/sign-up"
           className="text-sm font-medium text-wisk-muted transition-colors hover:text-white"
         >
           Get started

@@ -137,7 +137,7 @@ export function Hero() {
           transition={{ delay: reduce ? 0 : 0.78 }}
           className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
-          <Button href={`${appUrl}/sign-in`}>Get started</Button>
+          <Button href={`${appUrl}/sign-up`}>Get started</Button>
           <Button variant="outline" href={`${appUrl}/sign-in`}>
             Sign in
           </Button>

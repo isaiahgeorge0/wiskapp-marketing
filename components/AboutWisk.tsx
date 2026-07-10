@@ -170,7 +170,7 @@ export function AboutWisk() {
 
           {/* CTA */}
           <div className="mb-2 mt-10 flex justify-center">
-            <Button href="https://app.wiskapp.com/sign-in">Get started</Button>
+            <Button href="https://app.wiskapp.com/sign-up">Get started</Button>
           </div>
         </div>
       </div>
