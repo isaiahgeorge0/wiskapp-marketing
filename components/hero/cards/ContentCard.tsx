@@ -4,9 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#F97316";
+const ACCENT = "#0066ff";
 const DAYS = ["M","T","W","T","F","S","S"];
-const DOTS: Record<number, string> = { 1:"#7C3AED", 2:ACCENT, 4:"#14B8A6", 5:"#7C3AED" };
+const DOTS: Record<number, string> = { 1:"#aca0ff", 2:ACCENT, 4:"#016c81", 5:"#aca0ff" };
 
 export function ContentCard() {
   const reduce = useReducedMotion();

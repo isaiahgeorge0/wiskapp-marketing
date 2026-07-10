@@ -19,7 +19,7 @@ function StaticTask({ label, checked }: { label: string; checked: boolean }) {
         className="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-sm"
         style={
           checked
-            ? { background: "#7C3AED" }
+            ? { background: "#aca0ff" }
             : { border: "1px solid rgba(255,255,255,0.2)", background: "transparent" }
         }
       >
@@ -55,7 +55,7 @@ function AnimatedTask({ checked, reduce }: { checked: boolean; reduce: boolean |
         {/* Checked fill — fades in when checked */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center rounded-sm"
-          style={{ background: "#7C3AED" }}
+          style={{ background: "#aca0ff" }}
           animate={{ opacity: checked ? 1 : 0, scale: checked ? 1 : 0.7 }}
           transition={
             reduce
@@ -150,16 +150,16 @@ export function ProjectsModuleCard() {
 
   return (
     <motion.div
-      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a0f] p-7 md:aspect-[5/4] md:p-8"
+      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-wisk-border bg-wisk-card p-7 md:aspect-[5/4] md:p-8"
       style={{
-        boxShadow: "0 30px 80px -25px rgba(124,58,237,0.30)",
+        boxShadow: "0 30px 80px -25px rgba(172,160,255,0.30)",
       }}
       whileHover={
         reduce
           ? undefined
           : {
               y: -4,
-              boxShadow: "0 40px 100px -25px rgba(124,58,237,0.42)",
+              boxShadow: "0 40px 100px -25px rgba(172,160,255,0.42)",
               transition: { duration: 0.25, ease: EASE },
             }
       }
@@ -168,12 +168,12 @@ export function ProjectsModuleCard() {
     >
       {/* Header */}
       <div className="flex items-start gap-3">
-        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#7C3AED]" />
+        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#aca0ff]" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-lg font-semibold text-white">Brand identity project</p>
           <p className="text-sm text-white/50">Client project · Active</p>
         </div>
-        <span className="shrink-0 rounded-md bg-purple-500/15 px-2.5 py-1 text-xs font-medium text-purple-300">
+        <span className="shrink-0 rounded-md bg-[#aca0ff]/15 px-2.5 py-1 text-xs font-medium text-[#aca0ff]">
           Active
         </span>
       </div>
@@ -186,7 +186,7 @@ export function ProjectsModuleCard() {
         </div>
         <div className="h-2 w-full overflow-hidden rounded-full bg-white/5">
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-purple-600 to-purple-400"
+            className="h-full rounded-full bg-[#aca0ff]"
             animate={{ width: barWidth }}
             transition={reduce ? undefined : { duration: 0.05 }} // driven by rAF, keep transition near-instant
           />

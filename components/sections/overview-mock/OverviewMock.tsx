@@ -8,9 +8,9 @@ import { StatCard } from "@/components/sections/overview-mock/StatCard";
 import { ThisWeek } from "@/components/sections/overview-mock/ThisWeek";
 
 const REST_SHADOW =
-  "0 40px 120px -30px rgba(124,58,237,0.35), 0 0 0 1px rgba(255,255,255,0.04)";
+  "0 40px 120px -30px rgba(195,255,50,0.25), 0 0 0 1px rgba(255,255,255,0.04)";
 const LIFT_SHADOW =
-  "0 50px 140px -30px rgba(124,58,237,0.28), 0 0 0 1px rgba(255,255,255,0.06)";
+  "0 50px 140px -30px rgba(195,255,50,0.20), 0 0 0 1px rgba(255,255,255,0.06)";
 
 export function OverviewMock() {
   const reduce = useReducedMotion();
@@ -18,7 +18,7 @@ export function OverviewMock() {
   return (
     // group class lets the inner glow overlay use group-hover via CSS
     <motion.div
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0f]"
+      className="group relative overflow-hidden rounded-2xl border border-wisk-border bg-wisk-card"
       style={{ boxShadow: REST_SHADOW }}
       // Continuous float — y + rotation + shadow shift, all on the same 4.5s loop
       animate={
@@ -59,7 +59,7 @@ export function OverviewMock() {
         className="pointer-events-none absolute inset-0 z-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(ellipse at 50% -10%, rgba(124,58,237,0.18) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 50% -10%, rgba(195,255,50,0.15) 0%, transparent 55%)",
         }}
       />
 

@@ -71,15 +71,15 @@ export function SocialMediaCard() {
     <motion.div
       whileHover={reduce ? undefined : { y: -4 }}
       style={{
-        boxShadow: "0 30px 80px -25px #34D3994D",
+        boxShadow: "0 30px 80px -25px #baf7e14D",
         borderRadius: "1rem",
       }}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
       <VisionCardShell
-        badge={{ text: "Coming with WISK Growth", accent: "#34D399" }}
+        badge={{ text: "Coming with WISK Growth", accent: "#baf7e1" }}
         footer={{ package: "WISK Growth", timing: "Late 2026" }}
-        accentColor="#34D399"
+        accentColor="#baf7e1"
       >
         {/* ── Header ───────────────────────────────────────────────── */}
         <div className="flex items-center gap-3">

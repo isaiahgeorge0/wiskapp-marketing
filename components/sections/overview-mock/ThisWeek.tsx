@@ -22,7 +22,7 @@ export function ThisWeek() {
   return (
     <div className="rounded-xl border border-white/6 bg-[#111118] p-5">
       <div className="flex items-center gap-2">
-        <Calendar className="h-4 w-4 text-[#14B8A6]" aria-hidden />
+        <Calendar className="h-4 w-4 text-[#016c81]" aria-hidden />
         <p className="text-sm font-semibold text-white">This week</p>
       </div>
 

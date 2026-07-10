@@ -1,15 +1,15 @@
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#8B5CF6";
+const ACCENT = "#00c4b4";
 
 const DAYS = ["M","T","W","T","F","S","S"];
 
 const events: { day: number; color: string; label: string }[] = [
-  { day: 0, color: "#7C3AED", label: "Call" },
-  { day: 1, color: "#F97316", label: "Post" },
-  { day: 2, color: "#14B8A6", label: "Review" },
-  { day: 3, color: "#F59E0B", label: "Goal" },
-  { day: 4, color: "#7C3AED", label: "Ship" },
+  { day: 0, color: "#aca0ff", label: "Call" },
+  { day: 1, color: "#ff5d00", label: "Post" },
+  { day: 2, color: "#016c81", label: "Review" },
+  { day: 3, color: "#baf7e1", label: "Goal" },
+  { day: 4, color: "#0066ff", label: "Ship" },
 ];
 
 export function CalendarCard() {

@@ -1,6 +1,6 @@
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#14B8A6";
+const ACCENT = "#ff5d00";
 
 const stages = [
   { label: "New",       width: "45%" },

@@ -22,7 +22,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
             className="aspect-[16/9] w-full object-cover transition-opacity group-hover:opacity-90"
           />
         ) : (
-          <div className="aspect-[16/9] w-full bg-gradient-to-br from-wisk-purple/40 to-wisk-teal/30" />
+          <div className="aspect-[16/9] w-full bg-gradient-to-br from-wisk-lime/40 to-wisk-turquoise/30" />
         )}
       </Link>
 
@@ -35,7 +35,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
         </time>
 
         <Link href={`/blog/${post.slug}`}>
-          <h2 className="mt-2 text-xl font-semibold tracking-tight transition-colors group-hover:text-wisk-purple">
+          <h2 className="mt-2 text-xl font-semibold tracking-tight transition-colors group-hover:text-wisk-lime">
             {post.title}
           </h2>
         </Link>
@@ -59,7 +59,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
 
         <Link
           href={`/blog/${post.slug}`}
-          className="mt-4 text-sm font-medium text-wisk-purple transition-colors hover:text-wisk-teal"
+          className="mt-4 text-sm font-medium text-wisk-lime transition-colors hover:text-wisk-turquoise"
         >
           Read more →
         </Link>

@@ -135,12 +135,12 @@ export function HeroCardStrip({ cards }: HeroCardStripProps) {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 md:w-28"
-        style={{ background: "linear-gradient(to right, #0b0f1a, transparent)" }}
+        style={{ background: "linear-gradient(to right, #141b27, transparent)" }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 md:w-28"
-        style={{ background: "linear-gradient(to left, #0b0f1a, transparent)" }}
+        style={{ background: "linear-gradient(to left, #141b27, transparent)" }}
       />
 
       <div className="overflow-hidden">

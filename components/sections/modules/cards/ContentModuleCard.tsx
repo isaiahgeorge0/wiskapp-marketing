@@ -21,7 +21,7 @@ function StatusDot({ published, reduce }: { published: boolean; reduce: boolean 
     <div className="relative h-2.5 w-2.5 shrink-0">
       <motion.div
         className="absolute inset-0 flex items-center justify-center rounded-full"
-        style={{ background: "#F97066" }}
+        style={{ background: "#0066ff" }}
         animate={{ opacity: published ? 0 : 1, scale: published ? 0.7 : 1 }}
         transition={reduce ? undefined : { duration: 0.3, ease: "easeInOut" }}
       >
@@ -74,11 +74,11 @@ export function ContentModuleCard() {
 
   return (
     <motion.div
-      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a0f] p-7 md:aspect-[5/4] md:p-8"
-      style={{ boxShadow: "0 30px 80px -25px rgba(249,112,102,0.28)" }}
+      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-wisk-border bg-wisk-card p-7 md:aspect-[5/4] md:p-8"
+      style={{ boxShadow: "0 30px 80px -25px rgba(0,102,255,0.28)" }}
       whileHover={reduce ? undefined : {
         y: -4,
-        boxShadow: "0 40px 100px -25px rgba(249,112,102,0.42)",
+        boxShadow: "0 40px 100px -25px rgba(0,102,255,0.42)",
         transition: { duration: 0.25, ease: EASE },
       }}
       role="img"
@@ -86,23 +86,23 @@ export function ContentModuleCard() {
     >
       {/* ── Header ── */}
       <div className="flex items-start gap-3">
-        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#F97066]" />
+        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#0066ff]" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-lg font-semibold text-white">Content calendar</p>
           <p className="text-sm text-white/50">This week · 5 scheduled</p>
         </div>
         {/* Streak pill */}
-        <div className="flex shrink-0 items-center gap-1.5 rounded-md bg-[rgba(249,112,102,0.15)] px-2.5 py-1">
+        <div className="flex shrink-0 items-center gap-1.5 rounded-md bg-[#0066ff]/15 px-2.5 py-1">
           <motion.div
             animate={!reduce && streakUp ? { scale: [1, 1.25, 1] } : { scale: 1 }}
             transition={!reduce ? { duration: 0.3, ease: "easeOut" as const } : undefined}
           >
-            <Flame className="h-3 w-3 text-[#F97066]" aria-hidden />
+            <Flame className="h-3 w-3 text-[#0066ff]" aria-hidden />
           </motion.div>
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
               key={streakKey}
-              className="tabular-nums text-xs font-medium text-[#fca79a]"
+              className="tabular-nums text-xs font-medium text-[#66a3ff]"
               initial={reduce ? false : { opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={reduce ? undefined : { opacity: 0, y: -4 }}
@@ -122,7 +122,7 @@ export function ContentModuleCard() {
             className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-white/60"
             animate={
               p === "TikTok" && !reduce
-                ? { backgroundColor: tikHighlight ? "rgba(249,112,102,0.20)" : "rgba(0,0,0,0)" }
+                ? { backgroundColor: tikHighlight ? "rgba(0,102,255,0.20)" : "rgba(0,0,0,0)" }
                 : undefined
             }
             transition={!reduce ? { duration: 0.4 } : undefined}

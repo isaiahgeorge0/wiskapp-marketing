@@ -10,12 +10,16 @@ type ButtonProps = ComponentPropsWithoutRef<"button"> & {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-wisk-purple text-white hover:bg-[#8f88e3] border border-transparent",
+    "bg-wisk-lime text-wisk-bg hover:brightness-95 border border-transparent",
   outline:
-    "border border-wisk-border bg-transparent text-white hover:border-white/20 hover:bg-white/5",
+    "border border-wisk-lime/30 bg-transparent text-white hover:border-wisk-lime/50 hover:bg-wisk-lime/5",
   gradient:
-    "bg-gradient-to-r from-purple-500 to-teal-400 text-white border border-transparent shadow-[0_10px_30px_-10px_rgba(124,58,237,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(124,58,237,0.7)] hover:-translate-y-px",
+    "bg-wisk-lime text-wisk-bg border border-transparent shadow-[0_10px_30px_-10px_rgba(195,255,50,0.4)] hover:shadow-[0_15px_40px_-10px_rgba(195,255,50,0.55)] hover:-translate-y-px hover:brightness-95",
 };
+
+function isExternal(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
 
 export function Button({
   variant = "primary",
@@ -27,6 +31,14 @@ export function Button({
   const classes = `inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-all ${variantClasses[variant]} ${className}`;
 
   if (href) {
+    if (isExternal(href)) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}

@@ -15,7 +15,7 @@ export function BuiltForBuilders() {
           className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(124,58,237,0.08) 0%, rgba(20,184,166,0.08) 50%, transparent 70%)",
+              "radial-gradient(circle, rgba(195,255,50,0.08) 0%, rgba(1,108,129,0.08) 50%, transparent 70%)",
             filter: "blur(72px)",
             mixBlendMode: "screen",
           }}
@@ -33,7 +33,7 @@ export function BuiltForBuilders() {
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Section header */}
         <div className="mb-10 text-center md:mb-14">
-          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-purple-300/70">
+          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-wisk-lime/70">
             Who it&apos;s for
           </p>
           <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-5xl">
@@ -48,21 +48,21 @@ export function BuiltForBuilders() {
         {/* Three builder cards */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           <BuilderCard
-            accentColor="#A78BFA"
+            accentColor="#aca0ff"
             icon="Briefcase"
             type="Freelancers & solo operators"
             description="Developers, designers, consultants. Anyone juggling client work, deadlines, and the business behind it."
             tagline="Client work, organised."
           />
           <BuilderCard
-            accentColor="#F97066"
+            accentColor="#fea9e0"
             icon="Sparkles"
             type="Content creators"
             description="Social-first founders building audiences across multiple platforms. Plan, publish, and see what actually works."
             tagline="Audience, deliberately built."
           />
           <BuilderCard
-            accentColor="#34D399"
+            accentColor="#baf7e1"
             icon="Users"
             type="Small agencies & studios"
             description="Teams managing client projects, content, and leads at scale. Visibility without the chaos."

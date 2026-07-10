@@ -21,7 +21,7 @@ function confirmationEmail(name: string) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>We've received your request</title>
   <style>
-    body { margin: 0; padding: 0; background-color: #0a0a0f; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    body { margin: 0; padding: 0; background-color: #141b27; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     .wrapper { max-width: 520px; margin: 0 auto; padding: 48px 24px; }
     .wordmark { font-size: 22px; font-weight: 700; background: linear-gradient(135deg, #a855f7, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.5px; margin-bottom: 40px; }
     .card { background: #111118; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 36px 32px; }

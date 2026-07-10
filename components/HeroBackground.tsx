@@ -10,11 +10,11 @@ export function HeroBackground() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-[#0A0E1A]"
+      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-wisk-bg"
     >
       {/* Layer 1 — drifting orbs (or static radial gradient fallback) */}
       {reduce ? (
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_15%,rgba(124,58,237,0.28)_0%,transparent_55%),radial-gradient(ellipse_at_80%_85%,rgba(20,184,166,0.22)_0%,transparent_50%),radial-gradient(ellipse_at_55%_45%,rgba(147,51,234,0.18)_0%,transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_15%,rgba(195,255,50,0.22)_0%,transparent_55%),radial-gradient(ellipse_at_80%_85%,rgba(1,108,129,0.18)_0%,transparent_50%),radial-gradient(ellipse_at_55%_45%,rgba(195,255,50,0.14)_0%,transparent_45%)]" />
       ) : (
         <>
           <div className="hero-orb-lg hero-orb-lg-1" />
@@ -31,7 +31,7 @@ export function HeroBackground() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(200,190,255,0.13) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(195,255,50,0.10) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -41,7 +41,7 @@ export function HeroBackground() {
         className="absolute bottom-0 left-0 right-0 h-72"
         style={{
           background:
-            "linear-gradient(to bottom, transparent, rgba(124,58,237,0.10) 40%, rgba(20,184,166,0.08) 70%, transparent)",
+            "linear-gradient(to bottom, transparent, rgba(195,255,50,0.08) 40%, rgba(1,108,129,0.06) 70%, transparent)",
           filter: "blur(32px)",
         }}
       />

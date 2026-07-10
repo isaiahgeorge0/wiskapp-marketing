@@ -18,7 +18,7 @@ export function CommandCentreModules() {
         <motion.div
           className="absolute left-[-15%] top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(20,184,166,0.18) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(1,108,129,0.18) 0%, transparent 70%)",
             filter: "blur(72px)",
           }}
           animate={reduce ? undefined : { opacity: [0.10, 0.20, 0.10] }}
@@ -35,11 +35,12 @@ export function CommandCentreModules() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-purple-300/70">
+          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-wisk-lime/70">
             Inside your command centre
           </p>
           <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-5xl">
-            Three modules that make the Overview possible.
+            Three modules that make the{" "}
+            <span className="text-wisk-lime">Overview</span> possible.
           </h2>
         </motion.div>
 

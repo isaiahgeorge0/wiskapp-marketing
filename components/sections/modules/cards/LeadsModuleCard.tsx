@@ -33,11 +33,11 @@ const STAGES: Stage[] = [
 
 // Teal opacity scale for bar fills
 const DEPTH_COLOR = [
-  "rgba(20,184,166,0.28)",
-  "rgba(20,184,166,0.40)",
-  "rgba(20,184,166,0.52)",
-  "rgba(20,184,166,0.65)",
-  "rgba(20,184,166,0.85)",
+  "rgba(255,93,0,0.28)",
+  "rgba(255,93,0,0.40)",
+  "rgba(255,93,0,0.52)",
+  "rgba(255,93,0,0.65)",
+  "rgba(255,93,0,0.85)",
 ];
 
 // Animated count badge
@@ -94,7 +94,7 @@ function ValuePill({
 }: { value: number; reduce: boolean | null }) {
   const formatted = `£${value.toLocaleString("en-GB")}`;
   return (
-    <span className="shrink-0 rounded-md bg-[rgba(20,184,166,0.15)] px-2.5 py-1 text-xs font-medium text-teal-300 tabular-nums">
+    <span className="shrink-0 rounded-md bg-[#ff5d00]/15 px-2.5 py-1 text-xs font-medium text-[#ff8a4d] tabular-nums">
       {formatted}
     </span>
   );
@@ -141,11 +141,11 @@ export function LeadsModuleCard() {
 
   return (
     <motion.div
-      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a0f] p-7 md:aspect-[5/4] md:p-8"
-      style={{ boxShadow: "0 30px 80px -25px rgba(20,184,166,0.28)" }}
+      className="relative flex aspect-auto flex-col overflow-hidden rounded-2xl border border-wisk-border bg-wisk-card p-7 md:aspect-[5/4] md:p-8"
+      style={{ boxShadow: "0 30px 80px -25px rgba(255,93,0,0.28)" }}
       whileHover={reduce ? undefined : {
         y: -4,
-        boxShadow: "0 40px 100px -25px rgba(20,184,166,0.42)",
+        boxShadow: "0 40px 100px -25px rgba(255,93,0,0.42)",
         transition: { duration: 0.25, ease: EASE },
       }}
       role="img"
@@ -153,7 +153,7 @@ export function LeadsModuleCard() {
     >
       {/* ── Header ── */}
       <div className="flex items-start gap-3">
-        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#14B8A6]" />
+        <div className="mt-0.5 h-10 w-10 shrink-0 rounded-md bg-[#ff5d00]" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-lg font-semibold text-white">Lead pipeline</p>
           <p className="text-sm text-white/50">This month · 8 active</p>
@@ -197,8 +197,8 @@ export function LeadsModuleCard() {
         transition={reduce ? undefined : { duration: 0.05 }}
       >
         {/* Avatar */}
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[rgba(20,184,166,0.2)]">
-          <span className="text-xs font-semibold text-teal-300">M</span>
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#ff5d00]/20">
+          <span className="text-xs font-semibold text-[#ff8a4d]">M</span>
         </div>
         {/* Details */}
         <div className="min-w-0 flex-1">

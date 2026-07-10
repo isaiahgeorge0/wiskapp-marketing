@@ -19,7 +19,7 @@ export function FutureVision() {
           className="absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(195,255,50,0.12) 0%, transparent 70%)",
             filter: "blur(80px)",
             mixBlendMode: "screen",
           }}
@@ -39,7 +39,7 @@ export function FutureVision() {
           className="absolute -left-32 bottom-0 h-[500px] w-[500px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(1,108,129,0.09) 0%, transparent 70%)",
             filter: "blur(72px)",
             mixBlendMode: "screen",
           }}
@@ -49,7 +49,7 @@ export function FutureVision() {
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Section header */}
         <div className="mb-10 text-center md:mb-14">
-          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-amber-300/70">
+          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-wisk-lime/70">
             On the horizon
           </p>
           <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-5xl">
@@ -107,7 +107,7 @@ export function FutureVision() {
         <div className="mx-auto mt-24 max-w-3xl text-center md:mt-32">
           <p className="text-xl font-medium leading-relaxed text-white/90 md:text-2xl">
             WISK today is genuinely useful.{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
+            <span className="text-wisk-lime">
               WISK in twelve months will be unmissable.
             </span>
           </p>

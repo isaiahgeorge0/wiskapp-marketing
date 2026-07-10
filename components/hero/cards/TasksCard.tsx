@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#14B8A6";
+const ACCENT = "#2dd4bf";
 
 const tasks = [
   { priority: "high" as const, label: "Send proposal" },

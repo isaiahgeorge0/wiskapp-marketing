@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#7C3AED";
+const ACCENT = "#aca0ff";
 
 export function ProjectsCard() {
   const reduce = useReducedMotion();

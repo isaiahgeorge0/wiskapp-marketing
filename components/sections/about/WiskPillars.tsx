@@ -20,7 +20,7 @@ const pillars: Pillar[] = [
   {
     letter: "W",
     name: "WISDOM",
-    accent: "#A78BFA",
+    accent: "#aca0ff",
     description: "Data is not understanding.",
     orbit: { x: [0, 6, 0, -6, 0], y: [0, -4, 0, 4, 0], duration: 6, delay: 0 },
     ariaLabel: "Wisdom. Data is not understanding.",
@@ -28,7 +28,7 @@ const pillars: Pillar[] = [
   {
     letter: "I",
     name: "INTEGRITY",
-    accent: "#7DD3FC",
+    accent: "#c3ff32",
     description: "Tools we trust with our work should be worth that trust.",
     orbit: { x: [0, -5, 0, 5, 0], y: [0, 5, 0, -5, 0], duration: 7.2, delay: 0.8 },
     ariaLabel: "Integrity. Tools we trust with our work should be worth that trust.",
@@ -36,7 +36,7 @@ const pillars: Pillar[] = [
   {
     letter: "S",
     name: "STRENGTH",
-    accent: "#5EEAD4",
+    accent: "#e8001d",
     description: "Ambition is heavy. The things that hold it must be built properly.",
     orbit: { x: [0, 7, 0, -7, 0], y: [0, 6, 0, -6, 0], duration: 5.5, delay: 1.5 },
     ariaLabel: "Strength. Ambition is heavy. The things that hold it must be built properly.",
@@ -44,7 +44,7 @@ const pillars: Pillar[] = [
   {
     letter: "K",
     name: "KNOWLEDGE",
-    accent: "#FCD34D",
+    accent: "#fea9e0",
     description: "The longer it pays attention, the more it should have to say.",
     orbit: { x: [0, -6, 0, 6, 0], y: [0, -5, 0, 5, 0], duration: 6.8, delay: 0.4 },
     ariaLabel: "Knowledge. The longer it pays attention, the more it should have to say.",
@@ -98,7 +98,8 @@ function PillarUnit({ pillar, reduce }: PillarUnitProps) {
           }}
         >
           <span
-            className="text-3xl font-bold text-white md:text-4xl"
+            className="text-3xl font-bold md:text-4xl"
+            style={{ color: pillar.accent }}
             aria-hidden
           >
             {pillar.letter}

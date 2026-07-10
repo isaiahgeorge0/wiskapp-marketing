@@ -9,7 +9,7 @@ export function BrowserChrome() {
       </div>
 
       {/* URL bar */}
-      <div className="mx-auto w-full max-w-xs rounded-md border border-white/5 bg-[#0a0a0f] px-3 py-1.5 text-center text-xs text-white/40">
+      <div className="mx-auto w-full max-w-xs rounded-md border border-wisk-border bg-wisk-card px-3 py-1.5 text-center text-xs text-white/40">
         app.wiskapp.com
       </div>
 

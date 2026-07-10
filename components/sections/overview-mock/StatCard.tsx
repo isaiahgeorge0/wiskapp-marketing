@@ -4,10 +4,10 @@ import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-mot
 import { useEffect, useRef, useState } from "react";
 
 const ACCENT_COLORS = {
-  purple: { dot: "#7C3AED", subtext: "#a78bfa", glow: "rgba(124,58,237,0.35)" },
-  teal:   { dot: "#14B8A6", subtext: "#2dd4bf", glow: "rgba(20,184,166,0.35)" },
-  amber:  { dot: "#F59E0B", subtext: "#fbbf24", glow: "rgba(245,158,11,0.35)"  },
-  coral:  { dot: "#F97316", subtext: "#fb923c", glow: "rgba(249,115,22,0.35)"  },
+  purple: { dot: "#c3ff32", subtext: "#d4ff66", glow: "rgba(195,255,50,0.35)" },
+  teal:   { dot: "#016c81", subtext: "#2dd4bf", glow: "rgba(1,108,129,0.35)" },
+  amber:  { dot: "#ff5d00", subtext: "#ff8a4d", glow: "rgba(255,93,0,0.35)"  },
+  coral:  { dot: "#fea9e0", subtext: "#ffc4eb", glow: "rgba(254,169,224,0.35)"  },
 } as const;
 
 type Accent = keyof typeof ACCENT_COLORS;

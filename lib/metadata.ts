@@ -1,7 +1,7 @@
-export const siteTitle = "WISK — Your business. Centralised.";
+export const siteTitle = "WISK — Business Command Centre";
 
 export const siteDescription =
-  "The command centre for freelancers, creators, and small business owners. Manage projects, tasks, goals, leads, and content in one place.";
+  "One command centre for ambitious entrepreneurs, creators, and landlords. Manage projects, leads, goals, content, and property — all in one place. Powered by Winston AI.";
 
 export const blogTitle = "Blog — WISK";
 

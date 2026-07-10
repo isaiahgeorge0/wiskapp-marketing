@@ -20,12 +20,12 @@ export default function NotFound() {
 
       <div className="mt-10 flex flex-col items-center gap-4">
         <Button href="/">Go home</Button>
-        <Link
-          href="/#request-access"
+        <a
+          href="https://app.wiskapp.com/sign-up"
           className="text-sm font-medium text-wisk-muted transition-colors hover:text-white"
         >
-          Request access
-        </Link>
+          Get started
+        </a>
       </div>
     </main>
   );

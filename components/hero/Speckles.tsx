@@ -52,7 +52,7 @@ export function Speckles() {
               cx={s.cx}
               cy={s.cy}
               r={s.r}
-              fill="white"
+              fill={s.id % 2 === 0 ? "#c3ff32" : "#016c81"}
               opacity={s.opacity * 0.7}
             />
           );
@@ -75,7 +75,7 @@ export function Speckles() {
               cx={s.cx}
               cy={s.cy}
               r={s.r}
-              fill="white"
+              fill={s.id % 2 === 0 ? "#c3ff32" : "#016c81"}
               opacity={s.opacity}
               animate={{
                 ...twinkleAnim,
@@ -105,7 +105,7 @@ export function Speckles() {
             cx={s.cx}
             cy={s.cy}
             r={s.r}
-            fill="white"
+            fill={s.id % 2 === 0 ? "#c3ff32" : "#016c81"}
             opacity={s.opacity}
             animate={twinkleAnim}
             transition={twinkleTrans}

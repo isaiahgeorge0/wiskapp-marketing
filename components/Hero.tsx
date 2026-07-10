@@ -23,7 +23,7 @@ const cards = [
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const whiskedLetters = "whisked".split("");
+const accentLetters = "centralised.".split("");
 
 const containerVariants = {
   hidden: {},
@@ -37,7 +37,7 @@ const wordVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
 };
 
-const whiskedContainerVariants = {
+const accentContainerVariants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.03 },
@@ -63,35 +63,33 @@ export function Hero() {
       <HeroBackground />
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
-        {/* Invite-only pill */}
-        <motion.span
+        {/* Now live badge */}
+        <motion.div
           variants={reduce ? undefined : fadeUp}
           initial={reduce ? false : "hidden"}
           animate={reduce ? undefined : "visible"}
-          className="mb-8 inline-flex rounded-full border border-wisk-border bg-white/5 px-4 py-1.5 text-xs font-medium tracking-widest text-wisk-muted uppercase"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-wisk-lime/30 bg-wisk-lime/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-wisk-lime"
         >
-          Invite only. Request access below.
-        </motion.span>
+          <span className="inline-block size-1.5 animate-pulse rounded-full bg-wisk-lime" />
+          WISK AI + Properties — Now live
+        </motion.div>
 
         {/* Headline */}
         {reduce ? (
           <h1
-            className="text-5xl font-extrabold tracking-tight leading-[1.1] md:text-6xl lg:text-7xl"
-            style={{ textShadow: "0 0 80px rgba(124,58,237,0.25)" }}
+            className="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
+            style={{ textShadow: "0 0 80px rgba(195,255,50,0.2)" }}
           >
             Your business,{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
-              whisked
-            </span>{" "}
-            together.
+            <span className="text-wisk-lime">centralised.</span>
           </h1>
         ) : (
           <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-5xl font-extrabold tracking-tight leading-[1.1] md:text-6xl lg:text-7xl"
-            style={{ textShadow: "0 0 80px rgba(124,58,237,0.25)" }}
+            className="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
+            style={{ textShadow: "0 0 80px rgba(195,255,50,0.2)" }}
           >
             <motion.span variants={wordVariants} className="inline-block">
               Your{"\u00A0"}
@@ -99,13 +97,12 @@ export function Hero() {
             <motion.span variants={wordVariants} className="inline-block">
               business,{"\u00A0"}
             </motion.span>
-            {/* "whisked" with per-letter animation + gradient */}
             <motion.span variants={wordVariants} className="inline-block">
               <motion.span
-                variants={whiskedContainerVariants}
-                className="inline-block bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent"
+                variants={accentContainerVariants}
+                className="inline-block text-wisk-lime"
               >
-                {whiskedLetters.map((letter, i) => (
+                {accentLetters.map((letter, i) => (
                   <motion.span
                     key={`${letter}-${i}`}
                     custom={i}
@@ -116,10 +113,6 @@ export function Hero() {
                   </motion.span>
                 ))}
               </motion.span>
-              {"\u00A0"}
-            </motion.span>
-            <motion.span variants={wordVariants} className="inline-block">
-              together.
             </motion.span>
           </motion.h1>
         )}
@@ -132,9 +125,8 @@ export function Hero() {
           transition={{ delay: reduce ? 0 : 0.65 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-wisk-muted md:text-xl"
         >
-          One command centre for ambitious people.
-          <br className="hidden sm:block" />
-          Built on wisdom, integrity, strength, and knowledge.
+          One command centre for ambitious entrepreneurs, creators,
+          and landlords. Built to keep up with how you work.
         </motion.p>
 
         {/* CTAs */}
@@ -145,7 +137,7 @@ export function Hero() {
           transition={{ delay: reduce ? 0 : 0.78 }}
           className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
-          <Button href="#request-access">Request access</Button>
+          <Button href={`${appUrl}/sign-up`}>Get started</Button>
           <Button variant="outline" href={`${appUrl}/sign-in`}>
             Sign in
           </Button>

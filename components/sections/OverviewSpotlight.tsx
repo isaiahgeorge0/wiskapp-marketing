@@ -22,7 +22,7 @@ export function OverviewSpotlight() {
         <motion.div
           className="absolute left-1/2 top-[15%] h-[700px] w-[700px] -translate-x-1/2 rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(124,58,237,0.22) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(195,255,50,0.22) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
           animate={reduce ? undefined : { opacity: [0.15, 0.28, 0.15] }}
@@ -32,7 +32,7 @@ export function OverviewSpotlight() {
         <div
           className="absolute bottom-[5%] right-[5%] h-[400px] w-[400px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(20,184,166,0.14) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(1,108,129,0.14) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -45,7 +45,7 @@ export function OverviewSpotlight() {
           initial={reduce ? false : "hidden"}
           whileInView={reduce ? undefined : "visible"}
           viewport={{ once: true, margin: "-80px" }}
-          className="mb-5 text-center text-xs font-medium uppercase tracking-[0.2em] text-purple-300/70"
+          className="mb-5 text-center text-xs font-medium uppercase tracking-[0.2em] text-wisk-lime/70"
         >
           The command centre
         </motion.p>
@@ -60,7 +60,7 @@ export function OverviewSpotlight() {
           className="mb-5 text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
         >
           Everything in one place.{" "}
-          <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
+          <span className="text-wisk-lime">
             Finally.
           </span>
         </motion.h2>

@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { CardShell } from "@/components/hero/CardShell";
 
-const ACCENT = "#F59E0B";
+const ACCENT = "#baf7e1";
 
 const POINTS = [[0,30],[20,24],[40,20],[60,22],[80,12],[100,8],[120,2]];
 const PATH = POINTS.map(([x,y],i) => `${i===0?"M":"L"} ${x} ${y}`).join(" ");

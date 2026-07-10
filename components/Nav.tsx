@@ -9,7 +9,6 @@ import { Wordmark } from "@/components/ui/Wordmark";
 export function Nav() {
   const pathname = usePathname();
   const isBlog = pathname.startsWith("/blog");
-  const requestAccessHref = pathname === "/" ? "#request-access" : "/#request-access";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-wisk-border bg-wisk-bg/80 backdrop-blur-md">
@@ -21,7 +20,7 @@ export function Nav() {
           <Link
             href="/blog"
             className={`text-sm font-medium transition-colors ${
-              isBlog ? "text-wisk-purple" : "text-wisk-muted hover:text-white"
+              isBlog ? "text-wisk-lime" : "text-wisk-muted hover:text-white"
             }`}
           >
             Blog
@@ -34,7 +33,7 @@ export function Nav() {
           >
             Sign in
           </a>
-          <Button href={requestAccessHref}>Request access</Button>
+          <Button href="https://app.wiskapp.com/sign-up">Get started</Button>
         </div>
       </div>
     </header>

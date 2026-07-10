@@ -67,13 +67,13 @@ export function CommerceCard() {
   return (
     <motion.div
       whileHover={reduce ? undefined : { y: -4 }}
-      style={{ boxShadow: "0 30px 80px -25px #60A5FA4D", borderRadius: "1rem" }}
+      style={{ boxShadow: "0 30px 80px -25px #016c814D", borderRadius: "1rem" }}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
       <VisionCardShell
-        badge={{ text: "Coming with WISK Commerce", accent: "#60A5FA" }}
+        badge={{ text: "Coming with WISK Commerce", accent: "#016c81" }}
         footer={{ package: "WISK Commerce", timing: "Late 2026" }}
-        accentColor="#60A5FA"
+        accentColor="#016c81"
       >
         {/* ── Header ───────────────────────────────────────────────── */}
         <div className="flex items-center gap-3">
@@ -172,7 +172,7 @@ export function CommerceCard() {
                   <div
                     className="absolute inset-0"
                     style={{
-                      background: `linear-gradient(to right, ${conn.dotColor}40, #60A5FA40)`,
+                      background: `linear-gradient(to right, ${conn.dotColor}40, #016c8140)`,
                     }}
                   />
                   {/* Traveling pulse streak */}
@@ -181,7 +181,7 @@ export function CommerceCard() {
                       className="absolute top-1/2 h-4 w-8 -translate-y-1/2 rounded-full"
                       style={{
                         background:
-                          "linear-gradient(to right, transparent, #93C5FD, transparent)",
+                          "linear-gradient(to right, transparent, #016c81, transparent)",
                       }}
                       animate={{ left: ["-10%", "110%"] }}
                       transition={{

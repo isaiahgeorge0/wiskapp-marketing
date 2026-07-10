@@ -70,7 +70,7 @@ export function AboutWisk() {
         <motion.div
           className="absolute -right-32 -top-32 h-[600px] w-[600px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(124,58,237,0.14) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(195,255,50,0.12) 0%, transparent 70%)",
             filter: "blur(72px)",
             mixBlendMode: "screen",
           }}
@@ -80,7 +80,7 @@ export function AboutWisk() {
         <motion.div
           className="absolute -bottom-28 -left-28 h-[500px] w-[500px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(20,184,166,0.11) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(1,108,129,0.10) 0%, transparent 70%)",
             filter: "blur(64px)",
             mixBlendMode: "screen",
           }}
@@ -104,14 +104,14 @@ export function AboutWisk() {
       {/* ── Content ─────────────────────────────────────────────────── */}
       <div className="relative mx-auto max-w-3xl">
         {/* Eyebrow */}
-        <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-purple-300/70">
+        <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-wisk-lime/70">
           The origin
         </p>
 
         {/* Title */}
         <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">
           What{" "}
-          <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
+          <span className="text-wisk-lime">
             WISK
           </span>
           {" "}means
@@ -129,8 +129,8 @@ export function AboutWisk() {
               bottom: 0,
               width: 2,
               background:
-                "linear-gradient(to bottom, rgba(124,58,237,0) 0%, rgba(124,58,237,0.45) 20%, rgba(20,184,166,0.45) 80%, rgba(20,184,166,0) 100%)",
-              boxShadow: "3px 0 10px -2px rgba(124,58,237,0.18)",
+                "linear-gradient(to bottom, rgba(195,255,50,0) 0%, rgba(195,255,50,0.45) 20%, rgba(1,108,129,0.45) 80%, rgba(1,108,129,0) 100%)",
+              boxShadow: "3px 0 10px -2px rgba(195,255,50,0.18)",
               borderRadius: 1,
             }}
           />
@@ -170,7 +170,7 @@ export function AboutWisk() {
 
           {/* CTA */}
           <div className="mb-2 mt-10 flex justify-center">
-            <Button href="#request-access">Request access</Button>
+            <Button href="https://app.wiskapp.com/sign-up">Get started</Button>
           </div>
         </div>
       </div>

@@ -11,11 +11,11 @@ export function VisionCardShell({
   children,
   badge,
   footer,
-  accentColor = "#A78BFA",
+  accentColor = "#aca0ff",
 }: VisionCardShellProps) {
   return (
     <div
-      className="relative flex aspect-auto flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0f] md:aspect-[5/4]"
+      className="relative flex aspect-auto flex-col rounded-2xl overflow-hidden border border-wisk-border bg-wisk-card md:aspect-[5/4]"
       style={{
         boxShadow: `0 30px 80px -25px ${accentColor}4D`,
       }}

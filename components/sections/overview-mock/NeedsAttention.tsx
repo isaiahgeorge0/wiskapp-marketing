@@ -17,8 +17,8 @@ const items = [
     meta: "Needs review",
   },
   {
-    color: "#7C3AED",
-    hoverBg: "rgba(124,58,237,0.07)",
+    color: "#aca0ff",
+    hoverBg: "rgba(172,160,255,0.07)",
     title: "Q3 revenue goal",
     meta: "23d left",
   },

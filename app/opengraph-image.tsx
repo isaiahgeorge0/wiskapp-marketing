@@ -9,7 +9,7 @@ export default function OpenGraphImage() {
     (
       <div
         style={{
-          background: "#0B0F1A",
+          background: "#141b27",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -27,10 +27,10 @@ export default function OpenGraphImage() {
             letterSpacing: "0.2em",
           }}
         >
-          <span style={{ color: "#7F77DD" }}>W</span>
-          <span style={{ color: "#6B8FDB" }}>I</span>
-          <span style={{ color: "#4FA89A" }}>S</span>
-          <span style={{ color: "#1D9E75" }}>K</span>
+          <span style={{ color: "#c3ff32" }}>W</span>
+          <span style={{ color: "#aca0ff" }}>I</span>
+          <span style={{ color: "#016c81" }}>S</span>
+          <span style={{ color: "#fea9e0" }}>K</span>
         </div>
         <p
           style={{
