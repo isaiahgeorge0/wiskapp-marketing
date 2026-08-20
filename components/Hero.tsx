@@ -71,7 +71,7 @@ export function Hero() {
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-wisk-lime/30 bg-wisk-lime/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-wisk-lime"
         >
           <span className="inline-block size-1.5 animate-pulse rounded-full bg-wisk-lime" />
-          WISK AI + Properties — Now live
+          WISK AI + Properties · Now live
         </motion.div>
 
         {/* Headline */}

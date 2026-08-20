@@ -121,7 +121,7 @@ From time to time, we may make experimental or early-access features available. 
 
 ## 8. Third-party integrations
 
-WISK allows you to optionally connect third-party services (such as Vercel, GitHub, or — for applicable plans — email providers). Your use of these integrations is subject to the terms and privacy policies of those third-party providers, in addition to these Terms. We are not responsible for the availability, accuracy, or practices of third-party services.
+WISK allows you to optionally connect third-party services (such as Vercel, GitHub, or, for applicable plans, email providers). Your use of these integrations is subject to the terms and privacy policies of those third-party providers, in addition to these Terms. We are not responsible for the availability, accuracy, or practices of third-party services.
 
 ---
 

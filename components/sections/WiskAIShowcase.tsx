@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
 
 const FEATURES = [
-  "Weekly AI digest — every Sunday morning",
-  "Winston Chat — ask about your pipeline, projects, or goals",
-  "Smart suggestions — flags what needs attention before it's a problem",
-  "Email intelligence — Gmail and Outlook, organised automatically (AI Pro)",
+  "Weekly AI digest, every Sunday morning",
+  "Winston Chat: ask about your pipeline, projects, or goals",
+  "Smart suggestions that flag what needs attention before it's a problem",
+  "Email intelligence for Gmail and Outlook, organised automatically (AI Pro)",
 ];
 
 export function WiskAIShowcase() {

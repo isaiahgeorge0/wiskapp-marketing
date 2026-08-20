@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 
 const FEATURES = [
-  "Portfolio dashboard — properties, tenants, maintenance at a glance",
-  "Yield analytics — gross yield, net yield, ROI per property",
-  "Tenant reliability scoring — A to F grade based on payment history",
-  "Legal notice builder — Section 8 and Section 13 official forms",
-  "SA105 tax summary — HMRC-aligned, ready for your accountant",
+  "Portfolio dashboard for properties, tenants, and maintenance at a glance",
+  "Yield analytics: gross yield, net yield, and ROI per property",
+  "Tenant reliability scoring from A to F based on payment history",
+  "Legal notice builder for Section 8 and Section 13 official forms",
+  "SA105 tax summary, HMRC-aligned and ready for your accountant",
 ];
 
 export function WiskPropertiesShowcase() {

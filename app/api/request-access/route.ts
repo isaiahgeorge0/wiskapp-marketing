@@ -38,7 +38,7 @@ function confirmationEmail(name: string) {
       <h1>Request received.</h1>
       <p>Hi ${displayName}, thanks for your interest in WISK. We've got your request and we'll review it shortly.</p>
       <p>Once approved, you'll receive a separate email with a link to set your password and get into your command centre.</p>
-      <p>In the meantime — WISK is your business, whisked together. Projects, tasks, goals, content, leads, and ideas. One place.</p>
+      <p>In the meantime, WISK is your business, whisked together. Projects, tasks, goals, content, leads, and ideas. One place.</p>
     </div>
     <div class="footer">WISK · <a href="https://wiskapp.com">wiskapp.com</a></div>
   </div>
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
       await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL ?? "WISK <hello@wiskapp.com>",
         to: email,
-        subject: "We've received your request — WISK",
+        subject: "We've received your request | WISK",
         html: confirmationEmail(name),
       });
     } catch (emailErr) {

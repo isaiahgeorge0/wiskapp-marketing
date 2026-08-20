@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: 18 June 2026**
+**Last updated: 29 July 2026**
 
 ---
 
@@ -26,8 +26,9 @@ When you sign up for WISK, we collect:
 
 - Your name
 - Your email address
-- A password (stored securely as a salted hash — we never store or have access to your plain-text password)
+- A password (stored securely as a salted hash; we never store or have access to your plain-text password)
 - Your theme and display preferences
+- Optional greeting preferences (gender and/or a custom greeting term), collected solely to personalise Winston's copy
 
 ### 2.2 Business data you provide
 
@@ -45,9 +46,9 @@ This data belongs to you. We do not use it for any purpose other than providing 
 
 ### 2.3 Information from integrations (optional)
 
-If you choose to connect third-party integrations (for example, Vercel or GitHub for project monitoring, or — for users on applicable plans — email accounts via Gmail or Outlook), we will access and store the data necessary to provide that integration. This may include:
+If you choose to connect third-party integrations (for example, Vercel or GitHub for project monitoring, or, for users on applicable plans, email accounts via Gmail or Outlook), we will access and store the data necessary to provide that integration. This may include:
 
-- API tokens or OAuth credentials (stored encrypted — see Section 6)
+- API tokens or OAuth credentials (stored encrypted; see Section 6)
 - Project/deployment metadata (for Vercel/GitHub integrations)
 - Email metadata and content (only for users who explicitly connect an email integration, and only to power the features they have enabled)
 
@@ -112,7 +113,7 @@ We use the following third-party services to operate WISK. Each acts as a data p
 | **Vercel** | Application hosting and infrastructure | Global (Vercel's standard hosting regions) |
 | **Resend** | Sending transactional emails (password resets, account notifications, confirmations) | EU/US (per Resend's infrastructure) |
 | **Anthropic** | AI processing for Winston features (only for accounts with AI features enabled) | Per Anthropic's API infrastructure |
-| **GitHub** | Scheduled background jobs (e.g. weekly digest generation) — does not receive personal data beyond what is necessary to trigger these jobs | N/A |
+| **GitHub** | Scheduled background jobs (e.g. weekly digest generation). Does not receive personal data beyond what is necessary to trigger these jobs | N/A |
 
 We review our sub-processors periodically and will update this table if our stack changes. Material changes that affect how your data is processed will be communicated to you.
 
@@ -130,9 +131,9 @@ If WISK is involved in a merger, acquisition, or sale of assets, your data may b
 
 WISK uses minimal cookies and similar technologies, primarily for:
 
-- **Authentication** — to keep you securely signed in (essential, cannot be disabled without losing access to your account)
-- **Preferences** — to remember settings such as theme (dark/light mode)
-- **Analytics** — we use Vercel Analytics and Vercel Speed Insights to understand site performance and usage patterns. These tools are designed to be privacy-friendly and do not use cookies to track individuals across sites.
+- **Authentication**: to keep you securely signed in (essential, cannot be disabled without losing access to your account)
+- **Preferences**: to remember settings such as theme (dark/light mode)
+- **Analytics**: we use Vercel Analytics and Vercel Speed Insights to understand site performance and usage patterns. These tools are designed to be privacy-friendly and do not use cookies to track individuals across sites.
 
 We do not use third-party advertising cookies or trackers.
 
@@ -142,11 +143,11 @@ We do not use third-party advertising cookies or trackers.
 
 We take the security of your data seriously. Measures include:
 
-- **Encryption in transit** — all data is transmitted over HTTPS/TLS.
-- **Encryption at rest for sensitive credentials** — integration tokens (e.g. for Vercel, GitHub, or email integrations) are encrypted using AES-256-GCM before being stored.
-- **Row Level Security** — our database enforces access controls so that your data is only accessible to your account, enforced at the database level.
-- **Password security** — passwords are never stored in plain text. They are hashed using industry-standard methods via our authentication provider (Supabase Auth).
-- **Access controls** — administrative access to user data is restricted and logged.
+- **Encryption in transit**: all data is transmitted over HTTPS/TLS.
+- **Encryption at rest for sensitive credentials**: integration tokens (e.g. for Vercel, GitHub, or email integrations) are encrypted using AES-256-GCM before being stored.
+- **Row Level Security**: our database enforces access controls so that your data is only accessible to your account, enforced at the database level.
+- **Password security**: passwords are never stored in plain text. They are hashed using industry-standard methods via our authentication provider (Supabase Auth).
+- **Access controls**: administrative access to user data is restricted and logged.
 
 No method of transmission or storage is 100% secure, but we are committed to using commercially reasonable means to protect your data and to notifying you and the relevant authorities in the event of a data breach affecting your personal data, as required by law.
 
@@ -174,13 +175,13 @@ Where personal data is transferred outside the UK, we ensure appropriate safegua
 
 Under UK GDPR, you have the following rights in relation to your personal data:
 
-- **Right of access** — request a copy of the personal data we hold about you.
-- **Right to rectification** — request correction of inaccurate or incomplete data.
-- **Right to erasure** — request deletion of your personal data, subject to certain exceptions.
-- **Right to restrict processing** — request that we limit how we use your data in certain circumstances.
-- **Right to data portability** — request a copy of your data in a structured, commonly used, machine-readable format.
-- **Right to object** — object to processing based on legitimate interests, or to direct marketing at any time.
-- **Right to withdraw consent** — where processing is based on consent, withdraw it at any time.
+- **Right of access**: request a copy of the personal data we hold about you.
+- **Right to rectification**: request correction of inaccurate or incomplete data.
+- **Right to erasure**: request deletion of your personal data, subject to certain exceptions.
+- **Right to restrict processing**: request that we limit how we use your data in certain circumstances.
+- **Right to data portability**: request a copy of your data in a structured, commonly used, machine-readable format.
+- **Right to object**: object to processing based on legitimate interests, or to direct marketing at any time.
+- **Right to withdraw consent**: where processing is based on consent, withdraw it at any time.
 
 To exercise any of these rights, contact us at **hello@wiskapp.com**. We will respond within one month, as required by law.
 

@@ -15,7 +15,7 @@ export default function NotFound() {
       </h1>
 
       <p className="mt-4 text-base text-wisk-muted md:text-lg">
-        This page doesn&apos;t exist — but your command centre does.
+        This page doesn&apos;t exist, but your command centre does.
       </p>
 
       <div className="mt-10 flex flex-col items-center gap-4">
